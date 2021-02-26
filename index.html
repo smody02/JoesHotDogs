@@ -60,12 +60,14 @@
         document.write ("Tax: $" + Math.round(100*tax) / 100);
         document.write ("<br>");
         total = discount + tax;
+        document.write ("<br>");
         document.write ("Your total is $" + Math.round(100*total) / 100);
       }else{
         tax = subtotal * .0625;
         document.write ("Tax: $" + Math.round(100*tax) / 100);
         document.write ("<br>");
         total = subtotal + tax;
+        document.write ("<br>");
         document.write ("Your total is $" + Math.round(100*total) / 100 );
       }
 
