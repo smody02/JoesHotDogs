@@ -1,0 +1,75 @@
+<html>
+<head>
+  <meta charset="utf-8" >
+  <title> Joe's Hot Dogs </title>
+  <link rel='stylesheet' type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <script language="javascript">
+      name = prompt ("Welcome to Joe's Hot Dogs! What's your name?", "");
+
+      document.write (name +"'s Order:");
+
+      </script>
+
+      <p>
+        <script language="javascript">
+      hot = parseInt(prompt("Hi " + name + ", how many hotdogs ($3.25) would you like?", ""));
+
+      document.write ("<br>");
+
+      document.write ("&nbsp &nbsp &nbsp" + "Hotdogs(s): " + hot);
+
+
+
+      fries =parseInt(prompt("And how many French Fries ($2.00) would you like?", ""));
+
+      document.write ("<br>");
+
+      document.write ("&nbsp &nbsp &nbsp" + "Fries(s): " + fries);
+
+
+
+      drinks = parseInt(prompt("Lastly, how many Drinks ($1.50) would you like?", ""));
+
+      document.write ("<br>");
+
+      document.write ("&nbsp &nbsp &nbsp" + "Drink(s): " + drinks);
+
+      subtotal =
+          (hot * 3.25) +
+          (fries * 2.00) +
+          (drinks * 1.50);
+
+      document.write ("<br>");
+
+      document.write ("<br>");
+
+      document.write ("Subtotal: $" + subtotal);
+
+      document.write ("<br>");
+
+      if (subtotal >= 20){
+        document.write ("Congrats! You qualify for a 10% discount");
+        document.write ("<br>");
+        discount = subtotal * .9;
+        document.write ("Your new subtotal is $" + Math.round(100*discount) / 100 + " without tax.");
+        document.write ("<br>");
+        tax = discount * .0625;
+        document.write ("Tax: $" + Math.round(100*tax) / 100);
+        document.write ("<br>");
+        total = discount + tax;
+        document.write ("Your total is $" + Math.round(100*total) / 100);
+      }else{
+        tax = subtotal * .0625;
+        document.write ("Tax: $" + Math.round(100*tax) / 100);
+        document.write ("<br>");
+        total = subtotal + tax;
+        document.write ("Your total is $" + Math.round(100*total) / 100 );
+      }
+
+      </script>
+    </p>
+    </body>
+    <html>
